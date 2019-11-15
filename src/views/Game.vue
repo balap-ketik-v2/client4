@@ -195,9 +195,6 @@ export default {
     font-size: 22px;
     text-align: left;
   }
-  .paragraph {
-    /* margin-bottom: 50px; */
-  }
   textarea {
     width: 100%;
     background: white;
