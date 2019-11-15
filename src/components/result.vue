@@ -1,6 +1,6 @@
 <template>
     <div style="text-align: center; font-family: 'Domine', serif;">
-        <h1 style="font-family: 'Quicksand', sans-serif;" class="mb-4">GAME RESULT!</h1>
+        <h1 style="font-family: 'Quicksand', sans-serif; font-size: 100px;" class="mb-4">GAME RESULT!</h1>
         <div class="result" v-for="(player, index) in players" :key="player.id">
         <div class="alert alert-warning alert-dismissible fade show result text-center py-3 px-4 mb-2" >
             <p class="mb-0">

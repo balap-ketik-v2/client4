@@ -13,7 +13,7 @@
         <b-input-group>
           <b-form-input v-model="newuser" placeholder="Enter your name" type="text"></b-form-input>
           <b-input-group-append>
-            <b-button type="submit" variant="outline-secondary">Button</b-button>
+            <b-button type="submit" variant="outline-secondary">Join</b-button>
           </b-input-group-append>
         </b-input-group>
       </form>
