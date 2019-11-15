@@ -17,7 +17,7 @@ export default {
   name: 'Result',
   computed: {
     players () {
-      let player = []
+      // let player = []
       const data = Object.values(this.$store.state.objectData)
       const arr = data.slice(2, data.length - 1)
       for (var i = 0; i < arr.length; i++) {
