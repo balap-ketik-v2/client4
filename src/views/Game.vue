@@ -47,7 +47,6 @@
       </b-container>
     </b-container>
 
-    <!-- {{ players }} -->
     <div class="animation">
       <div class="track" v-for="(player, i) in players" :key="i">
         <div class="emot" :style="'margin-left:'+posisi(player.playerOrder)+'%;'">{{ emojiList[i] }}</div>
@@ -109,13 +108,6 @@ export default {
     text () {
       return this.$store.state.objectData.text
     },
-    posisi (playerOrder) {
-      if (this.$store.state.objectData) {
-        return (((this.$store.state.objectData[`player${playerOrder}`].position) / this.text.length) * 100)
-      } else {
-        return 0
-      }
-    },
     players () {
       const player = Object.values(this.$store.state.objectData)
       return player.slice(2, player.length - 1)
@@ -148,6 +140,13 @@ export default {
     },
     toHome () {
       this.$router.push({ path: '/' })
+    },
+    posisi (playerOrder) {
+      if (this.$store.state.objectData) {
+        return (((this.$store.state.objectData[`player${playerOrder}`].position) / this.text.length) * 100)
+      } else {
+        return 0
+      }
     }
   },
   watch: {
