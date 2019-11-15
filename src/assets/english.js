@@ -1,7 +1,7 @@
 module.exports = [
   {
     text:
-      'I have a pen. I have an apple. Uh! Apple-pen. I have a pen. I have pineapple. Uh! Pineapple-pen. Apple-pen... Pineapple-pen... Uh!! Pen-pineapple-apple-pen.',
+      "I don't even know myself at all. I thought I would be happy but now. The more I try to push it I realize gonna let go of control. Gonna let it happen, gonna let it happen, Gonna let it happen, just let it happen. It's just a spark but it's enough to keep me going. And when it's dark out and no one's around it keeps glowing. Every night I try my best to dream tomorrow makes it better. And wake up to the cold reality and not a thing is changed. But it would be happen, gonna let it happen. Gonna let it happen",
     name: 'PPAP by Pikotaro'
   },
   {
@@ -53,10 +53,14 @@ module.exports = [
   },
   {
     text:
-      "It's Hacktoberfest 2017! Let's contribute to open source! This round of CodeClub will be Hacktoberfest-themed!! It will take place on October 14th at Pronto Tools."
+    "I love Hacktiv8 So damn crazy lalalalalala. Make me feel desperate, happy, sad, and lalalalalala. I love Hacktiv8 So damn crazy lalalalalala. Make me feel desperate, happy, sad, and lalalalalala. I love Hacktiv8 So damn crazy lalalalalala. Make me feel desperate, happy, sad, and lalalalalala. I love Hacktiv8 So damn crazy lalalalalala. Make me feel desperate, happy, sad, and lalalalalala."
   },
   {
-    text: "About CodeClub, we don't talk about CodeClub"
+    text:
+      "I love making you believe. What you get is what you see. But I'm so fake happy. I feel so fake happy. And I bet everybody here. Is just as insincere. We're all so fake happy. And I know fake happy. I been doing a good job of makin' 'em think. I'm quite alright. But I hope I don't blink. You see its easy when I'm stomping on a beat. But no one sees me when I crawl back underneath. If I smile with my teeth. Bet you believe me. If I smile with my teeth. I think I believe me."
+  },
+  {
+    text: "You call me all friendly. Tellin' me how much you miss me. That's funny, I guess you've heard my songs. Well, I'm too busy for your business. Go find a girl who wants to listen. 'Cause if you think I was born yesterday. You have got me wrong. So I cut you off. I don't need your love. 'Cause I already cried enough. I've been done. I've been movin' on since we said goodbye. I cut you off. I don't need your love, so you can try all you want. Your time is up, I'll tell you why. You say you're sorry. But it's too late now"
   },
   {
     text:
@@ -64,6 +68,6 @@ module.exports = [
   },
   {
     text:
-      "'Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.' - Linus Torvalds"
+      "'Needless to say, I keep her in check. She was all bad-bad, nevertheless (yeah). Callin' it quits now, baby, I'm a wreck (wreck). Crash at my place, baby, you're a wreck (wreck). Needless to say, I'm keeping her in check. She was all bad-bad, nevertheless. Callin' it quits now, baby, I'm a wreck. Crash at my place, baby, you're a wreck. Thinkin' in a bad way, losin' your grip. Screamin' at my face, baby, don't trip. Someone took a big L, don't know how that felt. Lookin' at you sideways, party on tilt. Ooh-ooh, some things you just can't refuse'"
   }
 ]
