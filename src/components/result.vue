@@ -1,10 +1,10 @@
 <template>
     <div style="text-align: center; font-family: 'Domine', serif;">
-        <h1>Game Result</h1>
+        <h1 style="font-family: 'Quicksand', sans-serif; font-size: 100px;" class="mb-4">GAME RESULT!</h1>
         <div class="result" v-for="(player, index) in players" :key="player.id">
-        <div class="alert alert-warning alert-dismissible fade show result text-center py-3 px-4 mb-1" >
+        <div class="alert alert-warning alert-dismissible fade show result text-center py-3 px-4 mb-2" >
             <p class="mb-0">
-            {{ index+1 }}. {{ player.username }} <b>|</b> {{ player.wpm.toFixed(2) }} wpm
+            {{ index+1 }}. {{ player.username }} <b class="mx-2">|</b> {{ player.wpm.toFixed(2) }} wpm
             </p>
         </div>
         </div>
@@ -39,9 +39,10 @@ export default {
 
 <style  lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css?family=Domine&display=swap');
-    .result {
-        display: flex;
-        justify-content: center;
-    }
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
+  .result {
+    display: flex;
+    justify-content: center;
+  }
 </style>

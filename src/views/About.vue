@@ -6,14 +6,20 @@
       </b-col>
     </b-row>
 
+    <b-row>
+      <b-col>
+        <h4 class="welcome-title mt-2">Link to play with other player: <span class="bg-secondary text-white p-2">{{ roomThisLink }}</span></h4>
+      </b-col>
+    </b-row>
+
     <b-row v-if="!getUser" class="justify-content-center my-4">
       <b-col cols="7">
 
       <form @submit.prevent="userJoinRoom">
         <b-input-group>
-          <b-form-input v-model="newuser" placeholder="Enter your name" type="text"></b-form-input>
+          <b-form-input v-model="newuser" placeholder="Enter your name" required type="text"></b-form-input>
           <b-input-group-append>
-            <b-button type="submit" variant="outline-secondary">Button</b-button>
+            <b-button type="submit" variant="dark">Join</b-button>
           </b-input-group-append>
         </b-input-group>
       </form>
@@ -47,7 +53,8 @@ export default {
   data () {
     return {
       formusername: true,
-      newuser: ''
+      newuser: '',
+      roomThisLink: `/game/${this.$route.params.room}`
     }
   },
   computed: {
