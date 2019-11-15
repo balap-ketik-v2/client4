@@ -33,8 +33,6 @@
       </b-col>
     </b-row>
 
-    
-
     <b-row class="justify-content-center mt-4">
       <b-col cols="6">
         <div v-for="(data,key) in getData" :key="key">

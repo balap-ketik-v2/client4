@@ -215,7 +215,7 @@ export default {
   textarea {
     width: 100%;
     background: white;
-    font-family: 'Quicksand', sans-serif !important;    
+    font-family: 'Quicksand', sans-serif !important;
   }
   .typer {
     width: 100%;
