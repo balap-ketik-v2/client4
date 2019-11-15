@@ -50,7 +50,7 @@
     <!-- {{ players }} -->
     <div class="animation">
       <div class="track" v-for="(player, i) in players" :key="i">
-        <div class="emot" :style="'margin-left:'+posisi+'%;'">{{ emojiList[i] }}</div>
+        <div class="emot" :style="'margin-left:'+posisi(player.playerOrder)+'%;'">{{ emojiList[i] }}</div>
         <div class="name">{{ player.username }}</div>
       </div>
     </div>
@@ -109,9 +109,9 @@ export default {
     text () {
       return this.$store.state.objectData.text
     },
-    posisi () {
+    posisi (playerOrder) {
       if (this.$store.state.objectData) {
-        return (((this.$store.state.objectData.player1.position) / this.text.length) * 100)
+        return (((this.$store.state.objectData[`player${playerOrder}`].position) / this.text.length) * 100)
       } else {
         return 0
       }
