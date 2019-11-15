@@ -14,7 +14,7 @@
       <!-- input form  -->
       <div class="container">
         <form @submit.prevent="createRoom()">
-            <b-form-input v-model="username" placeholder="Enter your name"></b-form-input>
+            <b-form-input v-model="username" required placeholder="Enter your name"></b-form-input>
             <div>
               <b-button class="play-btn px-3 py-2 mt-3 btn-lg" type="submit" pill>PLAY !</b-button>
             </div>
