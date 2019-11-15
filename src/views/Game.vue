@@ -3,7 +3,7 @@
   <result v-if="finish"></result>
   <div v-if="!finish" id="app" oncopy="return false" oncut="return false" onpaste="return false">
     <b-navbar toggleable="lg" type="dark" variant="primary" class="navCustom">
-      <b-navbar-brand href="#" variant="light"><strong>BALAPAN NGETIK</strong></b-navbar-brand>
+      <b-navbar-brand @click="toHome" class="homes" variant="light"><strong>pacepetcepet</strong></b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
@@ -14,14 +14,19 @@
     <div>
 
     </div>
-    <b-container class="mt-5">
+    <div v-show="!startgame">
+      <h1 class="countdown">
+        Game Play in {{ startcount }} second.
+      </h1>
+    </div>
+    <b-container class="mt-5" v-show="startgame">
       <b-container class="gamecontainer">
         <b-row class="mb-4">
           <div class="paragraph mb-3" v-html="outputHTML">
           </div>
           <div class="typer mb-3">
             <textarea
-              autofocus="autofocus"
+              autofocus
               v-model="typing"
               placeholder="start typing here"
               @keydown="prevent">
@@ -54,7 +59,7 @@
 </template>
 
 <script>
-import texts from '../assets/english'
+// import texts from '../assets/english'
 import result from '../components/result'
 // import texts from '../assets/english'
 export default {
@@ -69,6 +74,8 @@ export default {
       started: '',
       time: 30,
       countTime: '',
+      startgame: false,
+      startcount: 10,
       emojiList: ['🐶', '🐹', '🐰', '🦊', '🦝', '🐻', '🐼', '🐨', '🐯', '🦁', '🐮', '🐷', '🐸', '🙉', '🐔', '🐧', '🐥', '🦉', '🐺', '🐴', '🦋', '🐌', '🐞', '🐳', '🦍', '🐘', '🦔']
     }
   },
@@ -127,13 +134,20 @@ export default {
       }
     },
     minTime () {
-      this.time -= 1
+      if (this.startgame) {
+        this.time -= 1
+      } else {
+        this.startcount -= 1
+      }
     },
     playSound (sound) {
       if (sound) {
         var audio = new Audio(sound)
         audio.play()
       }
+    },
+    toHome () {
+      this.$router.push({ path: '/' })
     }
   },
   watch: {
@@ -150,10 +164,16 @@ export default {
         }
       }
       this.playSound('https://www.soundjay.com/button/button-48.mp3')
-      this.correctWord = this.typing.split(' ').length
-      this.wpm = this.correctWord / ((Date.now() - this.started) / 60000)
+    },
+    startcount (value) {
+      if (value === 0) {
+        this.startgame = true
+        this.started = Date.now()
+      }
     },
     time (value) {
+      this.correctWord = this.typing.split(' ').length
+      this.wpm = this.correctWord / ((Date.now() - this.started) / 60000)
       if (value === 0) {
         clearTimeout(this.countTime)
         const lastposition = this.correctWord
@@ -186,15 +206,19 @@ export default {
     }
   },
   mounted () {
-    this.started = Date.now()
     this.countTime = setInterval(this.minTime, 1000)
   }
 }
 </script>
 
 <style scoped>
+  @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
   .navCustom{
     background-color: #62B69B !important;
+  }
+  .homes{
+    font-family: 'Abril Fatface', cursive;
+    cursor: pointer;
   }
   #app{
     height: 100vh;
@@ -259,6 +283,11 @@ export default {
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+  .countdown{
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 30px;
+    margin: 85px 0 85px 0;
+  }
   .paragraph{
     font-family: 'Quicksand', sans-serif !important;
   }
