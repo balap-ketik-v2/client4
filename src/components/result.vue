@@ -4,7 +4,7 @@
         <div class="result" v-for="(player, index) in players" :key="player.id">
         <div class="alert alert-warning alert-dismissible fade show result text-center py-3 px-4 mb-1" >
             <p class="mb-0">
-            {{ index+1 }}. {{ player.username }} <b>|</b> {{ player.wpm.toFixed(2) }} wpm
+            {{ index+1 }}. {{ player.username }} <b> <span style="color: #fff3cd"> 00 </span> </b> {{ player.wpm.toFixed(2) }} wpm
             </p>
         </div>
         </div>
